@@ -1,0 +1,299 @@
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.exe
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.pdb
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.xml
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\fr-FR\Ordre_virement_AES.resources.dll
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\fr\Ordre_virement_AES.resources.dll
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Interop.Ligne1000.dll
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Interop.Ligne1000.dll
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.vbproj.ResolveComReference.cache
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurActif_Cheque.rpt
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurEtranger.rpt
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurLocal.rpt
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurLocalNonActif.rpt
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurNonActifCheque.rpt
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre_de_Virement_FournisseurEtranger.rpt
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre de Virement_FournisseurLocal.rpt
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre de Virement_FournisseurLocalNonActif.rpt
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Formulaire_Fournisseuretranger.rpt
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Paiement_electronique.rpt
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurEtrangerVirement.resources
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupNonActifCheque.resources
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurNonActifCheque.resources
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupActifCheque.resources
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurActifCheque.resources
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupNonActifVirement.resources
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurNonActifVirement.resources
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MaquetteFournisseurEtranger.resources
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Resources.resources
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.frmChargement.resources
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.resources
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.ParametreConnexion.resources
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurLocaux.resources
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.vbproj.GenerateResource.Cache
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.fr-FR.resources
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.fr.resources
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\fr-FR\Ordre_virement_AES.resources.dll
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\fr\Ordre_virement_AES.resources.dll
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.exe
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.xml
+C:\Documents and Settings\User\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.pdb
+C:\Users\WIN7\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.exe
+C:\Users\WIN7\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.xml
+C:\Users\WIN7\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.pdb
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.exe
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.xml
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.pdb
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.exe
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.pdb
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.xml
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\fr-FR\Ordre_virement_AES.resources.dll
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\fr\Ordre_virement_AES.resources.dll
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Interop.Ligne1000.dll
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Interop.Ligne1000.dll
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.vbproj.ResolveComReference.cache
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurActif_Cheque.rpt
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurEtranger.rpt
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurLocalNonActif.rpt
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurNonActifCheque.rpt
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre_de_Virement_FournisseurEtranger.rpt
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre de Virement_FournisseurLocalNonActif.rpt
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Formulaire_Fournisseuretranger.rpt
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Paiement_electronique.rpt
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurEtrangerVirement.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupNonActifCheque.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurNonActifCheque.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupActifCheque.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurActifCheque.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupNonActifVirement.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurNonActifVirement.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MaquetteFournisseurEtranger.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Resources.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.frmChargement.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.ParametreConnexion.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurLocaux.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.fr-FR.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.fr.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\fr-FR\Ordre_virement_AES.resources.dll
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\fr\Ordre_virement_AES.resources.dll
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.AttestationFournisseurLocal_Devise.rpt
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.AttestationFournisseurLocal.rpt
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Paiement_electronique_Devise.rpt
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.OrdrevirementFournisseurLocalDev.rpt
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.OrdrevirementFournisseurLocal.rpt
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FichierJournal.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupDouaneVirement.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurDouaneVirement.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_Douane.rpt
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre de Virement_Douane.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.exe
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.xml
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.pdb
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.exe
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.pdb
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.xml
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\fr-FR\Ordre_virement_AES.resources.dll
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\fr\Ordre_virement_AES.resources.dll
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Interop.Ligne1000.dll
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Interop.Ligne1000.dll
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.vbproj.ResolveComReference.cache
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.AttestationFournisseurLocal_Devise.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_Douane.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurActif_Cheque.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurEtranger.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.AttestationFournisseurLocal.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurLocalNonActif.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurNonActifCheque.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre de Virement_Douane.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.OrdrevirementFournisseurLocalDev.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre_de_Virement_FournisseurEtranger.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.OrdrevirementFournisseurLocal.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre de Virement_FournisseurLocalNonActif.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Formulaire_Fournisseuretranger.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Paiement_electronique.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Paiement_electronique_Devise.rpt
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupDouaneVirement.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurDouaneVirement.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FichierJournal.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurEtrangerVirement.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupNonActifCheque.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurNonActifCheque.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupActifCheque.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurActifCheque.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupNonActifVirement.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurNonActifVirement.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MaquetteFournisseurEtranger.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Resources.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.frmChargement.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.ParametreConnexion.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurLocaux.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.vbproj.GenerateResource.Cache
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.fr-FR.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.fr.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\fr-FR\Ordre_virement_AES.resources.dll
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\fr\Ordre_virement_AES.resources.dll
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.CompteG.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.TranscodageTiers.resources
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Interop.Microsoft.Office.Core.dll
+C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.exe
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.xml
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.pdb
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Interop.Ligne1000.dll
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.vbproj.ResolveComReference.cache
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.AttestationFournisseurLocal_Devise.rpt
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_Douane.rpt
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurActif_Cheque.rpt
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurEtranger.rpt
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.AttestationFournisseurLocal.rpt
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurLocalNonActif.rpt
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurNonActifCheque.rpt
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre de Virement_Douane.rpt
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.OrdrevirementFournisseurLocalDev.rpt
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre_de_Virement_FournisseurEtranger.rpt
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.OrdrevirementFournisseurLocal.rpt
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre de Virement_FournisseurLocalNonActif.rpt
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Formulaire_Fournisseuretranger.rpt
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Paiement_electronique.rpt
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Paiement_electronique_Devise.rpt
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.CompteG.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupDouaneVirement.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurDouaneVirement.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FichierJournal.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurEtrangerVirement.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupNonActifCheque.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurNonActifCheque.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupActifCheque.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurActifCheque.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupNonActifVirement.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurNonActifVirement.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MaquetteFournisseurEtranger.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Resources.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.frmChargement.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.ParametreConnexion.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurLocaux.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.TranscodageTiers.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.vbproj.GenerateResource.Cache
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.fr-FR.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.fr.resources
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.exe
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.pdb
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.xml
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\fr-FR\Ordre_virement_AES.resources.dll
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\fr\Ordre_virement_AES.resources.dll
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Interop.Ligne1000.dll
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Interop.Microsoft.Office.Core.dll
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\fr-FR\Ordre_virement_AES.resources.dll
+C:\Documents and Settings\admin\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\fr\Ordre_virement_AES.resources.dll
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.exe
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.xml
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.pdb
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.exe
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.pdb
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.xml
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\fr-FR\Ordre_virement_AES.resources.dll
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\fr\Ordre_virement_AES.resources.dll
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Interop.Ligne1000.dll
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Interop.Ligne1000.dll
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.vbproj.ResolveComReference.cache
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.AttestationFournisseurLocal_Devise.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_Douane.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurActif_Cheque.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurEtranger.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.AttestationFournisseurLocal.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurLocalNonActif.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurNonActifCheque.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre de Virement_Douane.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.OrdrevirementFournisseurLocalDev.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre_de_Virement_FournisseurEtranger.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.OrdrevirementFournisseurLocal.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre de Virement_FournisseurLocalNonActif.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Formulaire_Fournisseuretranger.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Paiement_electronique.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Paiement_electronique_Devise.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupDouaneVirement.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurDouaneVirement.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FichierJournal.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurEtrangerVirement.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupNonActifCheque.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurNonActifCheque.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupActifCheque.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurActifCheque.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupNonActifVirement.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurNonActifVirement.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MaquetteFournisseurEtranger.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Resources.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.frmChargement.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.ParametreConnexion.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurLocaux.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.vbproj.GenerateResource.Cache
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.fr-FR.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.fr.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\fr-FR\Ordre_virement_AES.resources.dll
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\fr\Ordre_virement_AES.resources.dll
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.EnvoiManuelfichier.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.EnvoiManuelfichier.resources
+C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.AdressestockageMT.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.exe
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.xml
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.pdb
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.exe
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.pdb
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.xml
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\bin\Debug\fr-FR\Ordre_virement_AES.resources.dll
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\bin\Debug\fr\Ordre_virement_AES.resources.dll
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Interop.Ligne1000.dll
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Interop.Ligne1000.dll
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.vbproj.ResolveComReference.cache
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.AttestationFournisseurLocal_Devise.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_Douane.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurActif_Cheque.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurEtranger.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.AttestationFournisseurLocal.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurLocalNonActif.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Attestation_FournisseurNonActifCheque.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre de Virement_Douane.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.OrdrevirementFournisseurLocalDev.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre_de_Virement_FournisseurEtranger.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.OrdrevirementFournisseurLocal.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Ordre de Virement_FournisseurLocalNonActif.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Formulaire_Fournisseuretranger.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Paiement_electronique.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Paiement_electronique_Devise.rpt
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.EnvoiManuelfichier.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupDouaneVirement.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurDouaneVirement.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FichierJournal.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurEtrangerVirement.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupNonActifCheque.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurNonActifCheque.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupActifCheque.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurActifCheque.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.InfosupNonActifVirement.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurNonActifVirement.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MaquetteFournisseurEtranger.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.Resources.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.frmChargement.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.ParametreConnexion.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.FournisseurLocaux.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.AdressestockageMT.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.vbproj.GenerateResource.Cache
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.fr-FR.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.MenuApplication.fr.resources
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\fr-FR\Ordre_virement_AES.resources.dll
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES\Ordre_virement_ AES\obj\Debug\fr\Ordre_virement_AES.resources.dll
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES - Copie\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.exe
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES - Copie\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.xml
+C:\Users\ERIC\Documents\Visual Studio 2005\Projects\MT101\Ordre virement AES - Copie\Ordre_virement_ AES\obj\Debug\Ordre_virement_AES.pdb

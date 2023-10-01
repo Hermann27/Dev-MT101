@@ -1,0 +1,508 @@
+  OleAdaptFournisseur = New OleDbDataAdapter("Select * from FOURNISSEUR Where OidBordereauReglement='" & OledtFrnisseur.Rows(i).Item("OidBordereauReglement") & "'", OleConnenection)
+                                OleFournisseurDset = New DataSet
+                                OleAdaptFournisseur.Fill(OleFournisseurDset)
+                                OledtFournisseur = OleFournisseurDset.Tables(0)
+                                If OledtFournisseur.Rows.Count <> 0 Then
+                                    For j As Integer = 0 To OledtFournisseur.Rows.Count - 1
+                                        EstEditer = False
+                                        If Trim(OledtFournisseur.Rows(j).Item("OidBordereauReglement").ToString) <> "" And Trim(OledtFournisseur.Rows(j).Item("OidRoleTiers").ToString) <> "" Then
+                                            vider_table_temporaire("ATTESTATION")
+                                            vider_table_temporaire("TRIE_ECRITURE")
+                                            ReferenceFactureInterne = ClasMan.FindSingleton("TNFACTUREEXTERNE")
+                                            If Convert.IsDBNull(ReferenceFactureInterne) = False Then
+                                                ReferenceInterne = Strings.Left(ReferenceInterne, 3) & "" & NumeroBordereauReglement
+                                                AfficherRapport(Trim(OledtFournisseur.Rows(j).Item("OidTiers").ToString), OledtFournisseur.Rows(j).Item("OidcompteBancaireTiers").ToString, OledtFournisseur.Rows(j).Item("OidBordereauReglement").ToString, OledtFournisseur.Rows(j).Item("OidRoleTiers").ToString)
+                                                arg_Num(0) = OidBordereau.oidcompteBancaireEts
+                                                vComptebancaireEtablissement = ClasMan.FindObject("TCompteBancaire", "(oid=%1)", "oid", True, arg_Num)
+                                                If Convert.IsDBNull(vComptebancaireEtablissement) = False Then
+                                                    arg_Num(0) = vComptebancaireEtablissement.oidAgenceBancaire
+                                                    vAgenceBancaireAES = ClasMan.FindObject("TAgenceBancaire", "(oid=%1)", "oid", True, arg_Num)
+                                                    If Convert.IsDBNull(vAgenceBancaireAES) = False Then
+                                                        arg_Num(0) = vAgenceBancaireAES.oidBanque
+                                                        vBanqueEtablissement = ClasMan.FindObject("TBanque", "(oid=%1)", "oid", True, arg_Num)
+                                                        If Convert.IsDBNull(vBanqueEtablissement) = False Then
+                                                            vBanqueRattachement = ClasMan.FindObject("CPLRattachementBanqueMT", "(oidBanque=%1)", "oid", True, arg_Num)
+                                                            If Convert.IsDBNull(vBanqueRattachement) = False Then
+                                                                vOidBlockHeaderBasic = RenvoiOidBlock("BASIC HEADER BLOCK")
+                                                                vOidBlockHeaderAppli = RenvoiOidBlock("APPLICATION HEADER BLOCK")
+                                                                vOidBlockHeaderUser = RenvoiOidBlock("USER HEADER BLOCK")
+                                                                vOidBlockText = RenvoiOidBlock("TEST BLOCK")
+                                                                If Trim(vOidBlockHeaderBasic) <> "" Then
+                                                                    If Trim(vOidBlockHeaderAppli) <> "" Then
+                                                                        If Trim(vOidBlockHeaderUser) <> "" Then
+                                                                            If Trim(vOidBlockText) <> "" Then                                                                                
+                                                                                vBanquePaiement = ClasMan.FindObject("CPLBANQUEBIC", "(oidBanque=%1)", "oid", True, arg_Num)
+                                                                                If Convert.IsDBNull(vBanquePaiement) = False Then
+                                                                                    arg_Num(0) = OledtFournisseur.Rows(j).Item("OidModeReglement")
+                                                                                    vModeReglement = ClasMan.CreateObjectList("CPLTRANSCODAGEMODEREGLEMENT")
+                                                                                    vModeReglement.AddWhere("(oidSageModeReglement=%1)", "oid", True, [arg_Num])
+                                                                                    If vModeReglement.Count <> 0 Then
+                                                                                        vModeReglement.GetInstance(0, OidModeReglement)
+                                                                                        If OidModeReglement.MRCitibank = "EFT" Then 'virement étranger
+                                                                                            Dim OleAdaptaterServeur As OleDbDataAdapter
+                                                                                            Dim OleServeurDataset As DataSet
+                                                                                            Dim OledatableServeur As DataTable
+                                                                                            OleAdaptaterServeur = New OleDbDataAdapter("select * From SERVEURFICHIER WHERE Banque='" & Trim(Join(Split(vBanqueEtablissement.Code, "'"), "''")) & "'", OleConnenection)
+                                                                                            OleServeurDataset = New DataSet
+                                                                                            OleAdaptaterServeur.Fill(OleServeurDataset)
+                                                                                            OledatableServeur = OleServeurDataset.Tables(0)
+                                                                                            If OledatableServeur.Rows.Count <> 0 Then
+                                                                                                FtpDossierLocal = OledatableServeur.Rows(0).Item("LecteurReseau")
+                                                                                                If j = 0 Then
+                                                                                                    Fichier_ebanking = OledatableServeur.Rows(0).Item("LecteurReseau") & "MT101_Transfer_" & OidBordereau.numero & "_" & Format(DateAndTime.Year(Now), "0000") & "" & Format(DateAndTime.Month(Now), "00") & "" & Format(DateAndTime.Day(Now), "00") & "_" & "" & Format(DateAndTime.Hour(Now), "00") & "_" & Format(DateAndTime.Minute(Now), "00") & "_" & Format(DateAndTime.Second(Now), "00") & ".txt"
+                                                                                                End If
+                                                                                                dossierFtp = OledatableServeur.Rows(0).Item("SousRepertoire").ToString
+                                                                                                FTPserveur = RetourneServeurFtp(Trim(OledatableServeur.Rows(0).Item("Serveur").ToString))
+                                                                                                FTPuser = RetourneUserFtp(Trim(OledatableServeur.Rows(0).Item("Login").ToString))
+                                                                                                FTPpwd = RetournePassWordFtp(Trim(OledatableServeur.Rows(0).Item("Pasword").ToString))
+                                                                                                If Directory.Exists(OledatableServeur.Rows(0).Item("LecteurReseau")) = True Then
+                                                                                                    arg_Reg(0) = Trim(OledtFournisseur.Rows(j).Item("OidBordereauReglement").ToString)
+                                                                                                    arg_Reg(1) = Trim(OledtFournisseur.Rows(j).Item("OidRoleTiers").ToString)
+                                                                                                    vListEditionReglement = ClasMan.CreateObjectList("TReglement")
+                                                                                                    vListEditionReglement.AddWhere("(oidbordereauReglement=%1) and (oidroleTiers=%2)", "oid", True, [arg_Reg])
+                                                                                                    If vListEditionReglement.Count <> 0 Then
+                                                                                                        For m As Integer = 0 To vListEditionReglement.Count - 1
+                                                                                                            vListEditionReglement.GetInstance(m, vReglement)
+                                                                                                            arg_Num(0) = OidBordereau.oidcompteBancaireEts
+                                                                                                            vComptebancaireEtablissement = ClasMan.FindObject("TCompteBancaire", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                            If Convert.IsDBNull(vComptebancaireEtablissement) = False Then
+                                                                                                                arg_Num(0) = vReglement.oidcompteBancaireTiers
+                                                                                                                vComptebancairetiers = ClasMan.FindObject("TCompteBancaire", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                                If Convert.IsDBNull(vComptebancairetiers) = False Then
+                                                                                                                    arg_Num(0) = vComptebancairetiers.oidAgenceBancaire
+                                                                                                                    vAgenceBancaire = ClasMan.FindObject("TAgenceBancaire", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                                    If Convert.IsDBNull(vAgenceBancaire) = False Then
+                                                                                                                        arg_Num(0) = vAgenceBancaire.oidBanque
+                                                                                                                        vBanqueTiers = ClasMan.FindObject("TBanque", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                                        If Convert.IsDBNull(vBanqueTiers) = False Then
+                                                                                                                            Dim vCorrespondCodeSwift As Object = vAgenceBancaire.CodeBic
+                                                                                                                            Dim vDeviseMonnaie As Object = vDeviseMonetaire.CodeISO
+                                                                                                                            Dim vDateReglement As Object = Strings.FormatDateTime(OidBordereau.dateReglement, DateFormat.ShortDate)
+                                                                                                                            Dim vmontant As Object = vReglement.montant
+                                                                                                                            Dim vnumeroCompte As Object = vComptebancaireEtablissement.numeroCompte
+                                                                                                                            Dim vnumeroComptetiers As Object = vComptebancairetiers.upperIBAN
+                                                                                                                            Dim vreference As Object = vReglement.reference
+                                                                                                                            Dim vreferenceOrigine As Object = OidBordereau.reference
+                                                                                                                            If m = 0 Then
+                                                                                                                                Entete_TransferMT101(HeadderBlockBasic(vBanqueRattachement.oidBanqueMT1, vOidBlockHeaderBasic) & "" & HeadderBlockApplication(vBanqueRattachement.oidBanqueMT1, vOidBlockHeaderAppli, vOidBlockHeaderBasic) & "" & HeadderBlockUser(vBanqueRattachement.oidBanqueMT1, vOidBlockHeaderUser) & "" & BlockTextNotRepeated4(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, True, rtxtbox)
+                                                                                                                                Corps_TransferMT101(BlockTextNotRepeated20(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                                If Trim(vreference) <> "" Or Trim(vreferenceOrigine) <> "" Then
+                                                                                                                                    Corps_TransferMT101(BlockTextNotRepeated21RSC(vBanqueRattachement.oidBanqueMT1, vOidBlockText, vreference, vreferenceOrigine), Fichier_ebanking, rtxtbox)
+                                                                                                                                End If
+                                                                                                                                Corps_TransferMT101(BlockTextNotRepeated28D(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                                Corps_TransferMT101(BlockTextNotRepeated50H(vnumeroCompte), Fichier_ebanking, rtxtbox)
+                                                                                                                                Corps_TransferMT101(BlockTextNotRepeated52A(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                                Corps_TransferMT101(BlockTextNotRepeated30(OidBordereau.dateReglement), Fichier_ebanking, rtxtbox)
+                                                                                                                            End If
+                                                                                                                            Corps_TransferMT101(BlockTextRepeated21(ReferenceInterne), Fichier_ebanking, rtxtbox)
+                                                                                                                            Corps_TransferMT101(BlockTextRepeated23E(vBanqueRattachement.oidBanqueMT1, vOidBlockText, "BLANK"), Fichier_ebanking, rtxtbox)
+                                                                                                                            Corps_TransferMT101(BlockTextRepeated32B(vDeviseMonnaie, vmontant), Fichier_ebanking, rtxtbox)
+                                                                                                                            Corps_TransferMT101(BlockTextRepeated57A(vCorrespondCodeSwift), Fichier_ebanking, rtxtbox)
+                                                                                                                            Corps_TransferMT101(BlockTextRepeated59(vnumeroComptetiers), Fichier_ebanking, rtxtbox)
+                                                                                                                            Corps_TransferMT101(BlockTextRepeated59H(Trim(OledtFournisseur.Rows(j).Item("Caption").ToString)), Fichier_ebanking, rtxtbox)
+                                                                                                                            Corps_TransferMT101(BlockTextRepeated71A(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                            Corps_TransferMT101(BlockTextClose, Fichier_ebanking, rtxtbox)
+                                                                                                                            RemplirEBankingReglement(vDeviseMonnaie, RenvoieID("EBANKING"), "CM", "BLANK", Trim(OledtFournisseur.Rows(j).Item("Caption").ToString), vDateReglement, vreference, vmontant, OledtFournisseur.Rows(j).Item("OidcompteBancaireTiers").ToString)
+                                                                                                                        End If
+                                                                                                                    End If
+                                                                                                                End If
+                                                                                                            End If
+                                                                                                        Next m
+                                                                                                        If EstEditer = True Then
+                                                                                                            ClasMan.BeginTran(True)
+                                                                                                            ReferenceFactureInterne.NFACTEXT = Trim(ReferenceInterne)
+                                                                                                            ClasMan.Commit()
+                                                                                                            Dim RefFactureInterne As Object = Nothing
+                                                                                                            RefFactureInterne = ClasMan.FindSingleton("TNFACTUREEXTERNE")
+                                                                                                            If Convert.IsDBNull(RefFactureInterne) = False Then
+                                                                                                                If RefFactureInterne.NFACTEXT = ReferenceInterne Then
+                                                                                                                Else
+                                                                                                                    ClasMan.BeginTran(True)
+                                                                                                                    RefFactureInterne.NFACTEXT = ReferenceInterne
+                                                                                                                    ClasMan.Commit()
+                                                                                                                End If
+                                                                                                            End If
+                                                                                                        Else
+                                                                                                            File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur d'édition, la souche sera conservée !" & ControlChars.CrLf, Encoding.Default)
+                                                                                                            GestionMessageR("Erreur d'édition, la souche sera conservée !", rtxtbox)
+                                                                                                        End If
+                                                                                                    End If
+                                                                                                Else
+                                                                                                    File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur de paramètres, Le Lecteur réseau paramétré :" & OledatableServeur.Rows(0).Item("LecteurReseau") & " n'existe pas" & ControlChars.CrLf, Encoding.Default)
+                                                                                                    GestionMessageR("Erreur de paramètres,  Le Lecteur réseau paramétré :" & OledatableServeur.Rows(0).Item("LecteurReseau") & " n'existe pas", rtxtbox)
+                                                                                                End If
+                                                                                            Else
+                                                                                                File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur de paramètres, Aucun serveur de fichier ou Lecteur réseau paramétré pour la banque de l'établissement :" & vBanqueEtablissement.Code & ControlChars.CrLf, Encoding.Default)
+                                                                                                GestionMessageR("Erreur de paramètres,  Aucun serveur de fichier ou Lecteur réseau paramétré pour la banque de l'établissement :" & vBanqueEtablissement.Code, rtxtbox)
+                                                                                            End If
+                                                                                        Else
+                                                                                            If OidModeReglement.MRCitibank = "BKT" Then 'virement compte à compte
+                                                                                                Dim OleAdaptaterServeur As OleDbDataAdapter
+                                                                                                Dim OleServeurDataset As DataSet
+                                                                                                Dim OledatableServeur As DataTable
+                                                                                                OleAdaptaterServeur = New OleDbDataAdapter("select * From SERVEURFICHIER WHERE Banque='" & Trim(Join(Split(vBanqueEtablissement.Code, "'"), "''")) & "'", OleConnenection)
+                                                                                                OleServeurDataset = New DataSet
+                                                                                                OleAdaptaterServeur.Fill(OleServeurDataset)
+                                                                                                OledatableServeur = OleServeurDataset.Tables(0)
+                                                                                                If OledatableServeur.Rows.Count <> 0 Then
+                                                                                                    FtpDossierLocal = OledatableServeur.Rows(0).Item("LecteurReseau")
+                                                                                                    If j = 0 Then
+                                                                                                        Fichier_ebanking = OledatableServeur.Rows(0).Item("LecteurReseau") & "MT101_Transfer_" & OidBordereau.numero & "_" & Format(DateAndTime.Year(Now), "0000") & "" & Format(DateAndTime.Month(Now), "00") & "" & Format(DateAndTime.Day(Now), "00") & "_" & "" & Format(DateAndTime.Hour(Now), "00") & "_" & Format(DateAndTime.Minute(Now), "00") & "_" & Format(DateAndTime.Second(Now), "00") & ".txt"
+                                                                                                    End If
+                                                                                                    dossierFtp = OledatableServeur.Rows(0).Item("SousRepertoire").ToString
+                                                                                                    FTPserveur = RetourneServeurFtp(Trim(OledatableServeur.Rows(0).Item("Serveur").ToString))
+                                                                                                    FTPuser = RetourneUserFtp(Trim(OledatableServeur.Rows(0).Item("Login").ToString))
+                                                                                                    FTPpwd = RetournePassWordFtp(Trim(OledatableServeur.Rows(0).Item("Pasword").ToString))
+                                                                                                    If Directory.Exists(OledatableServeur.Rows(0).Item("LecteurReseau")) = True Then
+                                                                                                        arg_Reg(0) = Trim(OledtFournisseur.Rows(j).Item("OidBordereauReglement").ToString)
+                                                                                                        arg_Reg(1) = Trim(OledtFournisseur.Rows(j).Item("OidRoleTiers").ToString)
+                                                                                                        vListEditionReglement = ClasMan.CreateObjectList("TReglement")
+                                                                                                        vListEditionReglement.AddWhere("(oidbordereauReglement=%1) and (oidroleTiers=%2)", "oid", True, [arg_Reg])
+                                                                                                        If vListEditionReglement.Count <> 0 Then
+                                                                                                            For m As Integer = 0 To vListEditionReglement.Count - 1
+                                                                                                                vListEditionReglement.GetInstance(m, vReglement)
+                                                                                                                arg_Num(0) = OidBordereau.oidcompteBancaireEts
+                                                                                                                vComptebancaireEtablissement = ClasMan.FindObject("TCompteBancaire", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                                If Convert.IsDBNull(vComptebancaireEtablissement) = False Then
+                                                                                                                    arg_Num(0) = vReglement.oidcompteBancaireTiers
+                                                                                                                    vComptebancairetiers = ClasMan.FindObject("TCompteBancaire", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                                    If Convert.IsDBNull(vComptebancairetiers) = False Then
+                                                                                                                        arg_Num(0) = vComptebancairetiers.oidAgenceBancaire
+                                                                                                                        vAgenceBancaire = ClasMan.FindObject("TAgenceBancaire", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                                        If Convert.IsDBNull(vAgenceBancaire) = False Then
+                                                                                                                            arg_Num(0) = vAgenceBancaire.oidBanque
+                                                                                                                            vBanqueTiers = ClasMan.FindObject("TBanque", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                                            If Convert.IsDBNull(vBanqueTiers) = False Then
+                                                                                                                                Dim vCorrespondCodeSwift As Object = vAgenceBancaire.CodeBic
+                                                                                                                                Dim vDeviseMonnaie As Object = vDeviseMonetaire.CodeISO
+                                                                                                                                Dim vDateReglement As Object = Strings.FormatDateTime(OidBordereau.dateReglement, DateFormat.ShortDate)
+                                                                                                                                Dim vmontant As Object = vReglement.montant
+                                                                                                                                Dim vnumeroCompte As Object = vComptebancaireEtablissement.numeroCompte
+                                                                                                                                Dim vnumeroComptetiers As Object = vComptebancairetiers.numeroCompte
+                                                                                                                                Dim vreference As Object = vReglement.reference
+                                                                                                                                Dim vreferenceOrigine As Object = OidBordereau.reference
+                                                                                                                                If m = 0 Then
+                                                                                                                                    Entete_TransferMT101(HeadderBlockBasic(vBanqueRattachement.oidBanqueMT1, vOidBlockHeaderBasic) & "" & HeadderBlockApplication(vBanqueRattachement.oidBanqueMT1, vOidBlockHeaderAppli, vOidBlockHeaderBasic) & "" & HeadderBlockUser(vBanqueRattachement.oidBanqueMT1, vOidBlockHeaderUser) & "" & BlockTextNotRepeated4(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, True, rtxtbox)
+                                                                                                                                    Corps_TransferMT101(BlockTextNotRepeated20(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                                    If Trim(vreference) <> "" Or Trim(vreferenceOrigine) <> "" Then
+                                                                                                                                        Corps_TransferMT101(BlockTextNotRepeated21RSC(vBanqueRattachement.oidBanqueMT1, vOidBlockText, vreference, vreferenceOrigine), Fichier_ebanking, rtxtbox)
+                                                                                                                                    End If
+                                                                                                                                    Corps_TransferMT101(BlockTextNotRepeated28D(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                                    Corps_TransferMT101(BlockTextNotRepeated50H(vnumeroCompte), Fichier_ebanking, rtxtbox)
+                                                                                                                                    Corps_TransferMT101(BlockTextNotRepeated52A(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                                    Corps_TransferMT101(BlockTextNotRepeated30(OidBordereau.dateReglement), Fichier_ebanking, rtxtbox)
+                                                                                                                                End If
+                                                                                                                                Corps_TransferMT101(BlockTextRepeated21(ReferenceInterne), Fichier_ebanking, rtxtbox)
+                                                                                                                                Corps_TransferMT101(BlockTextRepeated23E(vBanqueRattachement.oidBanqueMT1, vOidBlockText, "OTHR/PAYACH"), Fichier_ebanking, rtxtbox)
+                                                                                                                                Corps_TransferMT101(BlockTextRepeated32B(vDeviseMonnaie, vmontant), Fichier_ebanking, rtxtbox)
+                                                                                                                                Corps_TransferMT101(BlockTextRepeated57A(vCorrespondCodeSwift), Fichier_ebanking, rtxtbox)
+                                                                                                                                Corps_TransferMT101(BlockTextRepeated59(vnumeroComptetiers), Fichier_ebanking, rtxtbox)
+                                                                                                                                Corps_TransferMT101(BlockTextRepeated59H(Trim(OledtFournisseur.Rows(j).Item("Caption").ToString)), Fichier_ebanking, rtxtbox)
+                                                                                                                                Corps_TransferMT101(BlockTextRepeated71A(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                                Corps_TransferMT101(BlockTextClose, Fichier_ebanking, rtxtbox)
+                                                                                                                                RemplirEBankingReglement(vDeviseMonnaie, RenvoieID("EBANKING"), "CM", "OTHR/PAYACH", Trim(OledtFournisseur.Rows(j).Item("Caption").ToString), vDateReglement, vreference, vmontant, OledtFournisseur.Rows(j).Item("OidcompteBancaireTiers").ToString)
+                                                                                                                            End If
+                                                                                                                        End If
+                                                                                                                    End If
+                                                                                                                End If
+                                                                                                            Next m
+                                                                                                            For m As Integer = 1 To CInt(ReferenceFactureInterne.NombFact)
+                                                                                                                If vDeviseMonetaire.CodeISO = "CFA" Or vDeviseMonetaire.CodeISO = "XAF" Then
+                                                                                                                    Edition_Attestation(ReferenceInterne, ReferenceFactureInterne.NomSignataire, ReferenceFactureInterne.PostSigne, m, Format(DTdate.Value, "dd MMM yyyy"), Trim(OledtFournisseur.Rows(j).Item("Caption").ToString), Trim(OledtFournisseur.Rows(j).Item("OidTiers").ToString), OledtFournisseur.Rows(j).Item("OidcompteBancaireTiers").ToString, Format((SomMnt - (SomIs + SomTva)), "##,##0"))
+                                                                                                                Else
+                                                                                                                    Edition_Attestation_Devise(ReferenceInterne, ReferenceFactureInterne.NomSignataire, ReferenceFactureInterne.PostSigne, m, Format(DTdate.Value, "dd MMM yyyy"), Trim(OledtFournisseur.Rows(j).Item("Caption").ToString), Trim(OledtFournisseur.Rows(j).Item("OidTiers").ToString), OledtFournisseur.Rows(j).Item("OidcompteBancaireTiers").ToString, (SomMnt - (SomIs + SomTva)), vDevise)
+                                                                                                                End If
+                                                                                                            Next m
+                                                                                                            If EstEditer = True Then
+                                                                                                                ClasMan.BeginTran(True)
+                                                                                                                ReferenceFactureInterne.NFACTEXT = Trim(ReferenceInterne)
+                                                                                                                ClasMan.Commit()
+                                                                                                                Dim RefFactureInterne As Object = Nothing
+                                                                                                                RefFactureInterne = ClasMan.FindSingleton("TNFACTUREEXTERNE")
+                                                                                                                If Convert.IsDBNull(RefFactureInterne) = False Then
+                                                                                                                    If RefFactureInterne.NFACTEXT = ReferenceInterne Then
+                                                                                                                    Else
+                                                                                                                        ClasMan.BeginTran(True)
+                                                                                                                        RefFactureInterne.NFACTEXT = ReferenceInterne
+                                                                                                                        ClasMan.Commit()
+                                                                                                                    End If
+                                                                                                                End If
+                                                                                                            Else
+                                                                                                                File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur d'édition, la souche sera conservée !" & ControlChars.CrLf, Encoding.Default)
+                                                                                                                GestionMessageR("Erreur d'édition, la souche sera conservée !", rtxtbox)
+                                                                                                            End If
+                                                                                                        End If
+                                                                                                    Else
+                                                                                                        File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur de paramètres, Le Lecteur réseau paramétré :" & OledatableServeur.Rows(0).Item("LecteurReseau") & " n'existe pas" & ControlChars.CrLf, Encoding.Default)
+                                                                                                        GestionMessageR("Erreur de paramètres,  Le Lecteur réseau paramétré :" & OledatableServeur.Rows(0).Item("LecteurReseau") & " n'existe pas", rtxtbox)
+                                                                                                    End If
+                                                                                                Else
+                                                                                                    File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur de paramètres, Aucun serveur de fichier ou Lecteur réseau paramétré pour la banque de l'établissement :" & vBanqueEtablissement.Code & ControlChars.CrLf, Encoding.Default)
+                                                                                                    GestionMessageR("Erreur de paramètres,  Aucun serveur de fichier ou Lecteur réseau paramétré pour la banque de l'établissement :" & vBanqueEtablissement.Code, rtxtbox)
+                                                                                                End If
+                                                                                            Else
+                                                                                                If OidModeReglement.MRCitibank = "DFT" Then 'virement local
+                                                                                                    Dim OleAdaptaterServeur As OleDbDataAdapter
+                                                                                                    Dim OleServeurDataset As DataSet
+                                                                                                    Dim OledatableServeur As DataTable
+                                                                                                    OleAdaptaterServeur = New OleDbDataAdapter("select * From SERVEURFICHIER WHERE Banque='" & Trim(Join(Split(vBanqueEtablissement.Code, "'"), "''")) & "'", OleConnenection)
+                                                                                                    OleServeurDataset = New DataSet
+                                                                                                    OleAdaptaterServeur.Fill(OleServeurDataset)
+                                                                                                    OledatableServeur = OleServeurDataset.Tables(0)
+                                                                                                    If OledatableServeur.Rows.Count <> 0 Then
+                                                                                                        FtpDossierLocal = OledatableServeur.Rows(0).Item("LecteurReseau")
+                                                                                                        If j = 0 Then
+                                                                                                            Fichier_ebanking = OledatableServeur.Rows(0).Item("LecteurReseau") & "MT101_Transfer_" & OidBordereau.numero & "_" & Format(DateAndTime.Year(Now), "0000") & "" & Format(DateAndTime.Month(Now), "00") & "" & Format(DateAndTime.Day(Now), "00") & "_" & "" & Format(DateAndTime.Hour(Now), "00") & "_" & Format(DateAndTime.Minute(Now), "00") & "_" & Format(DateAndTime.Second(Now), "00") & ".txt"
+                                                                                                        End If
+                                                                                                        dossierFtp = OledatableServeur.Rows(0).Item("SousRepertoire").ToString
+                                                                                                        FTPserveur = RetourneServeurFtp(Trim(OledatableServeur.Rows(0).Item("Serveur").ToString))
+                                                                                                        FTPuser = RetourneUserFtp(Trim(OledatableServeur.Rows(0).Item("Login").ToString))
+                                                                                                        FTPpwd = RetournePassWordFtp(Trim(OledatableServeur.Rows(0).Item("Pasword").ToString))
+                                                                                                        If Directory.Exists(OledatableServeur.Rows(0).Item("LecteurReseau")) = True Then
+                                                                                                            arg_Reg(0) = Trim(OledtFournisseur.Rows(j).Item("OidBordereauReglement").ToString)
+                                                                                                            arg_Reg(1) = Trim(OledtFournisseur.Rows(j).Item("OidRoleTiers").ToString)
+                                                                                                            vListEditionReglement = ClasMan.CreateObjectList("TReglement")
+                                                                                                            vListEditionReglement.AddWhere("(oidbordereauReglement=%1) and (oidroleTiers=%2)", "oid", True, [arg_Reg])
+                                                                                                            If vListEditionReglement.Count <> 0 Then
+                                                                                                                For m As Integer = 0 To vListEditionReglement.Count - 1
+                                                                                                                    vListEditionReglement.GetInstance(m, vReglement)
+                                                                                                                    arg_Num(0) = OidBordereau.oidcompteBancaireEts
+                                                                                                                    vComptebancaireEtablissement = ClasMan.FindObject("TCompteBancaire", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                                    If Convert.IsDBNull(vComptebancaireEtablissement) = False Then
+                                                                                                                        arg_Num(0) = vReglement.oidcompteBancaireTiers
+                                                                                                                        vComptebancairetiers = ClasMan.FindObject("TCompteBancaire", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                                        If Convert.IsDBNull(vComptebancairetiers) = False Then
+                                                                                                                            arg_Num(0) = vComptebancairetiers.oidAgenceBancaire
+                                                                                                                            vAgenceBancaire = ClasMan.FindObject("TAgenceBancaire", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                                            If Convert.IsDBNull(vAgenceBancaire) = False Then
+                                                                                                                                arg_Num(0) = vAgenceBancaire.oidBanque
+                                                                                                                                vBanqueTiers = ClasMan.FindObject("TBanque", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                                                If Convert.IsDBNull(vBanqueTiers) = False Then
+                                                                                                                                    Dim vCorrespondCodeSwift As Object = vAgenceBancaire.CodeBic
+                                                                                                                                    Dim vDeviseMonnaie As Object = vDeviseMonetaire.CodeISO
+                                                                                                                                    Dim vDateReglement As Object = Strings.FormatDateTime(OidBordereau.dateReglement, DateFormat.ShortDate)
+                                                                                                                                    Dim vmontant As Object = vReglement.montant
+                                                                                                                                    Dim vnumeroCompte As Object = vComptebancaireEtablissement.numeroCompte
+                                                                                                                                    Dim vnumeroComptetiers As Object = vComptebancairetiers.numeroCompte
+                                                                                                                                    Dim vreference As Object = vReglement.reference
+                                                                                                                                    Dim vreferenceOrigine As Object = OidBordereau.reference
+                                                                                                                                    If m = 0 Then
+                                                                                                                                        Entete_TransferMT101(HeadderBlockBasic(vBanqueRattachement.oidBanqueMT1, vOidBlockHeaderBasic) & "" & HeadderBlockApplication(vBanqueRattachement.oidBanqueMT1, vOidBlockHeaderAppli, vOidBlockHeaderBasic) & "" & HeadderBlockUser(vBanqueRattachement.oidBanqueMT1, vOidBlockHeaderUser) & "" & BlockTextNotRepeated4(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, True, rtxtbox)
+                                                                                                                                        Corps_TransferMT101(BlockTextNotRepeated20(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                                        If Trim(vreference) <> "" Or Trim(vreferenceOrigine) <> "" Then
+                                                                                                                                            Corps_TransferMT101(BlockTextNotRepeated21RSC(vBanqueRattachement.oidBanqueMT1, vOidBlockText, vreference, vreferenceOrigine), Fichier_ebanking, rtxtbox)
+                                                                                                                                        End If
+                                                                                                                                        Corps_TransferMT101(BlockTextNotRepeated28D(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                                        Corps_TransferMT101(BlockTextNotRepeated50H(vnumeroCompte), Fichier_ebanking, rtxtbox)
+                                                                                                                                        Corps_TransferMT101(BlockTextNotRepeated52A(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                                        Corps_TransferMT101(BlockTextNotRepeated30(OidBordereau.dateReglement), Fichier_ebanking, rtxtbox)
+                                                                                                                                    End If
+                                                                                                                                    Corps_TransferMT101(BlockTextRepeated21(ReferenceInterne), Fichier_ebanking, rtxtbox)
+                                                                                                                                    Corps_TransferMT101(BlockTextRepeated23E(vBanqueRattachement.oidBanqueMT1, vOidBlockText, "OTHR/PAYACH"), Fichier_ebanking, rtxtbox)
+                                                                                                                                    Corps_TransferMT101(BlockTextRepeated32B(vDeviseMonnaie, vmontant), Fichier_ebanking, rtxtbox)
+                                                                                                                                    Corps_TransferMT101(BlockTextRepeated57A(vCorrespondCodeSwift), Fichier_ebanking, rtxtbox)
+                                                                                                                                    Corps_TransferMT101(BlockTextRepeated59(vnumeroComptetiers), Fichier_ebanking, rtxtbox)
+                                                                                                                                    Corps_TransferMT101(BlockTextRepeated59H(Trim(OledtFournisseur.Rows(j).Item("Caption").ToString)), Fichier_ebanking, rtxtbox)
+                                                                                                                                    Corps_TransferMT101(BlockTextRepeated71A(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                                    Corps_TransferMT101(BlockTextClose, Fichier_ebanking, rtxtbox)
+                                                                                                                                    RemplirEBankingReglement(vDeviseMonnaie, RenvoieID("EBANKING"), "CM", "DFT", Trim(OledtFournisseur.Rows(j).Item("Caption").ToString), vDateReglement, vreference, vmontant, OledtFournisseur.Rows(j).Item("OidcompteBancaireTiers").ToString)
+                                                                                                                                End If
+                                                                                                                            End If
+                                                                                                                        End If
+                                                                                                                    End If
+                                                                                                                Next m
+                                                                                                                If EstParametre = True Then
+                                                                                                                    For m As Integer = 1 To CInt(ReferenceFactureInterne.NombFact)
+                                                                                                                        If vDeviseMonetaire.CodeISO = "CFA" Or vDeviseMonetaire.CodeISO = "XAF" Then
+                                                                                                                            Edition_Attestation(ReferenceInterne, ReferenceFactureInterne.NomSignataire, ReferenceFactureInterne.PostSigne, m, Format(DTdate.Value, "dd MMM yyyy"), Trim(OledtFournisseur.Rows(j).Item("Caption").ToString), Trim(OledtFournisseur.Rows(j).Item("OidTiers").ToString), OledtFournisseur.Rows(j).Item("OidcompteBancaireTiers").ToString, Format((SomMnt - (SomIs + SomTva)), "##,##0"))
+                                                                                                                        Else
+                                                                                                                            Edition_Attestation_Devise(ReferenceInterne, ReferenceFactureInterne.NomSignataire, ReferenceFactureInterne.PostSigne, m, Format(DTdate.Value, "dd MMM yyyy"), Trim(OledtFournisseur.Rows(j).Item("Caption").ToString), Trim(OledtFournisseur.Rows(j).Item("OidTiers").ToString), OledtFournisseur.Rows(j).Item("OidcompteBancaireTiers").ToString, (SomMnt - (SomIs + SomTva)), vDevise)
+                                                                                                                        End If
+                                                                                                                    Next m
+                                                                                                                Else
+                                                                                                                    File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur de paramètres, l'attestation bancaire pour paiement électronique ne sera pas éditée !" & ControlChars.CrLf, Encoding.Default)
+                                                                                                                    GestionMessageR("Erreur de paramètres, l'attestation bancaire pour paiement électronique ne sera pas éditée !", rtxtbox)
+                                                                                                                End If
+                                                                                                                If EstEditer = True Then
+                                                                                                                    ClasMan.BeginTran(True)
+                                                                                                                    ReferenceFactureInterne.NFACTEXT = Trim(ReferenceInterne)
+                                                                                                                    ClasMan.Commit()
+                                                                                                                    Dim RefFactureInterne As Object = Nothing
+                                                                                                                    RefFactureInterne = ClasMan.FindSingleton("TNFACTUREEXTERNE")
+                                                                                                                    If Convert.IsDBNull(RefFactureInterne) = False Then
+                                                                                                                        If RefFactureInterne.NFACTEXT = ReferenceInterne Then
+                                                                                                                        Else
+                                                                                                                            ClasMan.BeginTran(True)
+                                                                                                                            RefFactureInterne.NFACTEXT = ReferenceInterne
+                                                                                                                            ClasMan.Commit()
+                                                                                                                        End If
+                                                                                                                    End If
+                                                                                                                Else
+                                                                                                                    File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur d'édition, la souche sera conservée !" & ControlChars.CrLf, Encoding.Default)
+                                                                                                                    GestionMessageR("Erreur d'édition, la souche sera conservée !", rtxtbox)
+                                                                                                                End If
+                                                                                                            End If
+                                                                                                        Else
+                                                                                                            File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur de paramètres, Le Lecteur réseau paramétré :" & OledatableServeur.Rows(0).Item("LecteurReseau") & " n'existe pas" & ControlChars.CrLf, Encoding.Default)
+                                                                                                            GestionMessageR("Erreur de paramètres,  Le Lecteur réseau paramétré :" & OledatableServeur.Rows(0).Item("LecteurReseau") & " n'existe pas", rtxtbox)
+                                                                                                        End If
+
+                                                                                                    Else
+                                                                                                        File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur de paramètres, Aucun serveur de fichier ou Lecteur réseau paramétré pour la banque de l'établissement :" & vBanqueEtablissement.Code & ControlChars.CrLf, Encoding.Default)
+                                                                                                        GestionMessageR("Erreur de paramètres,  Aucun serveur de fichier ou Lecteur réseau paramétré pour la banque de l'établissement :" & vBanqueEtablissement.Code, rtxtbox)
+                                                                                                    End If
+                                                                                                Else
+                                                                                                    EstParametre = False
+                                                                                                    File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Aucune Correspondance CitiDirect pour le Mode de Réglement Sage : " & RenvoiModeReglement(OledtFournisseur.Rows(j).Item("OidModeReglement")) & ControlChars.CrLf, Encoding.Default)
+                                                                                                    GestionMessageR("Aucune Correspondance CitiDirect pour le Mode de Réglement Sage : " & RenvoiModeReglement(OledtFournisseur.Rows(j).Item("OidModeReglement")), rtxtbox)
+                                                                                                End If
+                                                                                            End If
+                                                                                        End If
+                                                                                    Else
+                                                                                        EstParametre = False
+                                                                                        File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Aucune Correspondance pour le Mode de Réglement : " & RenvoiModeReglement(OledtFournisseur.Rows(j).Item("OidModeReglement")) & ControlChars.CrLf, Encoding.Default)
+                                                                                        GestionMessageR("Aucune Correspondance pour le Mode de Réglement : " & RenvoiModeReglement(OledtFournisseur.Rows(j).Item("OidModeReglement")), rtxtbox)
+                                                                                        'Aucune correspondance mode reglement
+                                                                                    End If
+                                                                                Else
+                                                                                    Dim OleAdaptaterServeur As OleDbDataAdapter
+                                                                                    Dim OleServeurDataset As DataSet
+                                                                                    Dim OledatableServeur As DataTable
+                                                                                    OleAdaptaterServeur = New OleDbDataAdapter("select * From SERVEURFICHIER WHERE Banque='" & Trim(Join(Split(vBanqueEtablissement.Code, "'"), "''")) & "'", OleConnenection)
+                                                                                    OleServeurDataset = New DataSet
+                                                                                    OleAdaptaterServeur.Fill(OleServeurDataset)
+                                                                                    OledatableServeur = OleServeurDataset.Tables(0)
+                                                                                    If OledatableServeur.Rows.Count <> 0 Then
+                                                                                        FtpDossierLocal = OledatableServeur.Rows(0).Item("LecteurReseau")
+                                                                                        If j = 0 Then
+                                                                                            Fichier_ebanking = OledatableServeur.Rows(0).Item("LecteurReseau") & "MT101_Transfer_" & OidBordereau.numero & "_" & Format(DateAndTime.Year(Now), "0000") & "" & Format(DateAndTime.Month(Now), "00") & "" & Format(DateAndTime.Day(Now), "00") & "_" & "" & Format(DateAndTime.Hour(Now), "00") & "_" & Format(DateAndTime.Minute(Now), "00") & "_" & Format(DateAndTime.Second(Now), "00") & ".txt"
+                                                                                        End If
+                                                                                        dossierFtp = OledatableServeur.Rows(0).Item("SousRepertoire").ToString
+                                                                                        FTPserveur = RetourneServeurFtp(Trim(OledatableServeur.Rows(0).Item("Serveur").ToString))
+                                                                                        FTPuser = RetourneUserFtp(Trim(OledatableServeur.Rows(0).Item("Login").ToString))
+                                                                                        FTPpwd = RetournePassWordFtp(Trim(OledatableServeur.Rows(0).Item("Pasword").ToString))
+                                                                                        If Directory.Exists(OledatableServeur.Rows(0).Item("LecteurReseau")) = True Then
+                                                                                            arg_Reg(0) = Trim(OledtFournisseur.Rows(j).Item("OidBordereauReglement").ToString)
+                                                                                            arg_Reg(1) = Trim(OledtFournisseur.Rows(j).Item("OidRoleTiers").ToString)
+                                                                                            vListEditionReglement = ClasMan.CreateObjectList("TReglement")
+                                                                                            vListEditionReglement.AddWhere("(oidbordereauReglement=%1) and (oidroleTiers=%2)", "oid", True, [arg_Reg])
+                                                                                            If vListEditionReglement.Count <> 0 Then
+                                                                                                For m As Integer = 0 To vListEditionReglement.Count - 1
+                                                                                                    vListEditionReglement.GetInstance(m, vReglement)
+                                                                                                    arg_Num(0) = OidBordereau.oidcompteBancaireEts
+                                                                                                    vComptebancaireEtablissement = ClasMan.FindObject("TCompteBancaire", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                    If Convert.IsDBNull(vComptebancaireEtablissement) = False Then
+                                                                                                        arg_Num(0) = vReglement.oidcompteBancaireTiers
+                                                                                                        vComptebancairetiers = ClasMan.FindObject("TCompteBancaire", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                        If Convert.IsDBNull(vComptebancairetiers) = False Then
+                                                                                                            arg_Num(0) = vComptebancairetiers.oidAgenceBancaire
+                                                                                                            vAgenceBancaire = ClasMan.FindObject("TAgenceBancaire", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                            If Convert.IsDBNull(vAgenceBancaire) = False Then
+                                                                                                                arg_Num(0) = vAgenceBancaire.oidBanque
+                                                                                                                vBanqueTiers = ClasMan.FindObject("TBanque", "(oid=%1)", "oid", True, arg_Num)
+                                                                                                                If Convert.IsDBNull(vBanqueTiers) = False Then
+                                                                                                                    Dim vCorrespondCodeSwift As Object = vAgenceBancaire.CodeBic
+                                                                                                                    Dim vDeviseMonnaie As Object = vDeviseMonetaire.CodeISO
+                                                                                                                    Dim vDateReglement As Object = Strings.FormatDateTime(OidBordereau.dateReglement, DateFormat.ShortDate)
+                                                                                                                    Dim vmontant As Object = vReglement.montant
+                                                                                                                    Dim vnumeroCompte As Object = vComptebancaireEtablissement.numeroBBAN
+                                                                                                                    Dim vnumeroComptetiers As Object = vComptebancairetiers.numeroBBAN
+                                                                                                                    Dim vreference As Object = vReglement.reference
+                                                                                                                    Dim vreferenceOrigine As Object = OidBordereau.reference
+                                                                                                                    If m = 0 Then
+                                                                                                                        Entete_TransferMT101(HeadderBlockBasic(vBanqueRattachement.oidBanqueMT1, vOidBlockHeaderBasic) & "" & HeadderBlockApplication(vBanqueRattachement.oidBanqueMT1, vOidBlockHeaderAppli, vOidBlockHeaderBasic) & "" & HeadderBlockUser(vBanqueRattachement.oidBanqueMT1, vOidBlockHeaderUser) & "" & BlockTextNotRepeated4(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, True, rtxtbox)
+                                                                                                                        Corps_TransferMT101(BlockTextNotRepeated20(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                        If Trim(vreference) <> "" Or Trim(vreferenceOrigine) <> "" Then
+                                                                                                                            Corps_TransferMT101(BlockTextNotRepeated21RSC(vBanqueRattachement.oidBanqueMT1, vOidBlockText, vreference, vreferenceOrigine), Fichier_ebanking, rtxtbox)
+                                                                                                                        End If
+                                                                                                                        Corps_TransferMT101(BlockTextNotRepeated28D(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                        Corps_TransferMT101(BlockTextNotRepeated50H(vnumeroCompte), Fichier_ebanking, rtxtbox)
+                                                                                                                        Corps_TransferMT101(BlockTextNotRepeated52A(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                        Corps_TransferMT101(BlockTextNotRepeated30(OidBordereau.dateReglement), Fichier_ebanking, rtxtbox)
+                                                                                                                    End If
+                                                                                                                    Corps_TransferMT101(BlockTextRepeated21(ReferenceInterne), Fichier_ebanking, rtxtbox)
+                                                                                                                    Corps_TransferMT101(BlockTextRepeated23E(vBanqueRattachement.oidBanqueMT1, vOidBlockText, "BLANK"), Fichier_ebanking, rtxtbox)
+                                                                                                                    Corps_TransferMT101(BlockTextRepeated32B(vDeviseMonnaie, vmontant), Fichier_ebanking, rtxtbox)
+                                                                                                                    Corps_TransferMT101(BlockTextRepeated57A(vCorrespondCodeSwift), Fichier_ebanking, rtxtbox)
+                                                                                                                    Corps_TransferMT101(BlockTextRepeated59(vnumeroComptetiers), Fichier_ebanking, rtxtbox)
+                                                                                                                    Corps_TransferMT101(BlockTextRepeated59H(Trim(OledtFournisseur.Rows(j).Item("Caption").ToString)), Fichier_ebanking, rtxtbox)
+                                                                                                                    Corps_TransferMT101(BlockTextRepeated71A(vBanqueRattachement.oidBanqueMT1, vOidBlockText), Fichier_ebanking, rtxtbox)
+                                                                                                                    Corps_TransferMT101(BlockTextClose, Fichier_ebanking, rtxtbox)
+                                                                                                                    RemplirEBankingReglement(vDeviseMonnaie, RenvoieID("EBANKING"), "CM", "BLANK", Trim(OledtFournisseur.Rows(j).Item("Caption").ToString), vDateReglement, vreference, vmontant, OledtFournisseur.Rows(j).Item("OidcompteBancaireTiers").ToString)
+                                                                                                                End If
+                                                                                                            End If
+                                                                                                        End If
+                                                                                                    End If
+                                                                                                Next m
+                                                                                                If EstEditer = True Then
+                                                                                                    ClasMan.BeginTran(True)
+                                                                                                    ReferenceFactureInterne.NFACTEXT = Trim(ReferenceInterne)
+                                                                                                    ClasMan.Commit()
+                                                                                                    Dim RefFactureInterne As Object = Nothing
+                                                                                                    RefFactureInterne = ClasMan.FindSingleton("TNFACTUREEXTERNE")
+                                                                                                    If Convert.IsDBNull(RefFactureInterne) = False Then
+                                                                                                        If RefFactureInterne.NFACTEXT = ReferenceInterne Then
+                                                                                                        Else
+                                                                                                            ClasMan.BeginTran(True)
+                                                                                                            RefFactureInterne.NFACTEXT = ReferenceInterne
+                                                                                                            ClasMan.Commit()
+                                                                                                        End If
+                                                                                                    End If
+                                                                                                Else
+                                                                                                    File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur d'édition, la souche sera conservée !" & ControlChars.CrLf, Encoding.Default)
+                                                                                                    GestionMessageR("Erreur d'édition, la souche sera conservée !", rtxtbox)
+                                                                                                End If
+                                                                                            End If
+                                                                                        Else
+                                                                                            File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur de paramètres, Le Lecteur réseau paramétré :" & OledatableServeur.Rows(0).Item("LecteurReseau") & " n'existe pas" & ControlChars.CrLf, Encoding.Default)
+                                                                                            GestionMessageR("Erreur de paramètres,  Le Lecteur réseau paramétré :" & OledatableServeur.Rows(0).Item("LecteurReseau") & " n'existe pas", rtxtbox)
+                                                                                        End If
+                                                                                    Else
+                                                                                        File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur de paramètres, Aucun serveur de fichier ou Lecteur réseau paramétré pour la banque de l'établissement :" & vBanqueEtablissement.Code & ControlChars.CrLf, Encoding.Default)
+                                                                                        GestionMessageR("Erreur de paramètres,  Aucun serveur de fichier ou Lecteur réseau paramétré pour la banque de l'établissement :" & vBanqueEtablissement.Code, rtxtbox)
+                                                                                    End If
+                                                                                End If
+                                                                            Else
+                                                                                File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur de paramètres, le block de code :TEST BLOCK n'est pas créé!" & ControlChars.CrLf, Encoding.Default)
+                                                                                GestionMessageR("Erreur de paramètres, le block de code :TEST BLOCK n'est pas créé !", rtxtbox)
+                                                                            End If
+                                                                        Else
+                                                                            File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur de paramètres, le block de code :USER HEADER BLOCK n'est pas créé!" & ControlChars.CrLf, Encoding.Default)
+                                                                            GestionMessageR("Erreur de paramètres, le block de code :USER HEADER BLOCK n'est pas créé !", rtxtbox)
+                                                                        End If
+                                                                    Else
+                                                                        File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur de paramètres, le block de code :APPLICATION HEADER BLOCK n'est pas créé!" & ControlChars.CrLf, Encoding.Default)
+                                                                        GestionMessageR("Erreur de paramètres, le block de code :APPLICATION HEADER BLOCK n'est pas créé !", rtxtbox)
+                                                                    End If
+                                                                Else
+                                                                    File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur de paramètres, le block de code :BASIC HEADER BLOCK n'est pas créé!" & ControlChars.CrLf, Encoding.Default)
+                                                                    GestionMessageR("Erreur de paramètres, le block de code :BASIC HEADER BLOCK n'est pas créé !", rtxtbox)
+                                                                End If
+                                                            Else
+                                                                File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur de paramètres, la banque de l'établissement :" & vBanqueEtablissement.Code & " n'est rattaché à aucun format MT101 dans la table de paramétrage!" & ControlChars.CrLf, Encoding.Default)
+                                                                GestionMessageR("Erreur de paramètres, la banque de l'établissement :" & vBanqueEtablissement.Code & " n'est rattaché à aucun format MT101 dans la table de paramétrage!", rtxtbox)
+                                                            End If
+                                                        End If
+                                                    End If
+                                                End If
+                                            End If
+                                        End If
+                                    Next j
+                                    If EstParametre = True Then
+                                        If Trim(EnvoiManuel) = "Auto" Then
+                                            If Trim(TypeReseau) = "LR" Then
+                                                uploadLecteurReseau(FtpDossierLocal, dossierFtp, FTPserveur, FTPuser, FTPpwd, OidBordereau.numero, rtxtbox)
+                                            Else
+                                                uploadFtp(FtpDossierLocal, dossierFtp, FTPserveur, FTPuser, FTPpwd, OidBordereau.numero, rtxtbox)
+                                            End If
+                                        End If
+                                        If vDeviseMonetaire.CodeISO = "CFA" Or vDeviseMonetaire.CodeISO = "XAF" Then
+                                            Paiement_eBanking(Format(DTdate.Value, "dd MMM yyyy"), OidBordereau.oidcompteBancaireEts, OidBordereau.numero, vDeviseMonetaire.CodeISO)
+                                        Else
+                                            Paiement_eBanking_Devise(Format(DTdate.Value, "dd MMM yyyy"), OidBordereau.oidcompteBancaireEts, OidBordereau.numero, vDeviseMonetaire.CodeISO)
+                                        End If
+                                    Else
+                                        File.AppendAllText(FichierExtrait, "Bordereau N°:" & NumeroBordereauReglement & " < Erreur de paramètres, la note de paiement électronique ne sera pas éditée!" & ControlChars.CrLf, Encoding.Default)
+                                        GestionMessageR("Erreur de paramètres, la note de paiement électronique ne sera pas éditée !", rtxtbox)
+                                    End If
+                                End If

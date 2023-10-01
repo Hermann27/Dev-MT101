@@ -1,0 +1,5 @@
+regarde la fonction modifié dans le projet ci-dessous
+Ordre virement AES - Copie : Ecran FournisseurLocaux.vb : bouton "Editer"
+
+La version Originale est dans le projet :
+Ordre virement AES

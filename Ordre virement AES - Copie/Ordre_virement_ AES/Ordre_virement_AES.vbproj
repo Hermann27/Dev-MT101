@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C6F8B264-8F3F-4522-9903-84D290B1A8B8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Ordre_virement_AES.My.MyApplication</StartupObject>
+    <RootNamespace>Ordre_virement_AES</RootNamespace>
+    <AssemblyName>Ordre_virement_AES</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <ApplicationIcon>waza icone.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Ordre_virement_AES.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Ordre_virement_AES.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=12.0.1100.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=12.0.1100.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttestationFournisseurLocal_Devise.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttestationFournisseurLocal_Devise.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attestation_Douane.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Attestation_Douane.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attestation_FournisseurActif_Cheque.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Attestation_FournisseurActif_Cheque.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attestation_FournisseurEtranger.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Attestation_FournisseurEtranger.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AttestationFournisseurLocal.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AttestationFournisseurLocal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attestation_FournisseurLocalNonActif.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Attestation_FournisseurLocalNonActif.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Attestation_FournisseurNonActifCheque.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Attestation_FournisseurNonActifCheque.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Connect.vb" />
+    <Compile Include="EnvoiManuelfichier.designer.vb">
+      <DependentUpon>EnvoiManuelfichier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EnvoiManuelfichier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfosupDouaneVirement.Designer.vb">
+      <DependentUpon>InfosupDouaneVirement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InfosupDouaneVirement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FournisseurDouaneVirement.designer.vb">
+      <DependentUpon>FournisseurDouaneVirement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FournisseurDouaneVirement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FichierJournal.designer.vb">
+      <DependentUpon>FichierJournal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FichierJournal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FournisseurEtrangerVirement.designer.vb">
+      <DependentUpon>FournisseurEtrangerVirement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FournisseurEtrangerVirement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfosupNonActifCheque.Designer.vb">
+      <DependentUpon>InfosupNonActifCheque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InfosupNonActifCheque.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FournisseurNonActifCheque.designer.vb">
+      <DependentUpon>FournisseurNonActifCheque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FournisseurNonActifCheque.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfosupActifCheque.Designer.vb">
+      <DependentUpon>InfosupActifCheque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InfosupActifCheque.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FournisseurActifCheque.designer.vb">
+      <DependentUpon>FournisseurActifCheque.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FournisseurActifCheque.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfosupNonActifVirement.Designer.vb">
+      <DependentUpon>InfosupNonActifVirement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InfosupNonActifVirement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FournisseurNonActifVirement.designer.vb">
+      <DependentUpon>FournisseurNonActifVirement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FournisseurNonActifVirement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaquetteFournisseurEtranger.Designer.vb">
+      <DependentUpon>MaquetteFournisseurEtranger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaquetteFournisseurEtranger.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="frmChargement.designer.vb">
+      <DependentUpon>frmChargement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmChargement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuApplication.designer.vb">
+      <DependentUpon>MenuApplication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuApplication.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Ordre de Virement_Douane.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ordre de Virement_Douane.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrdrevirementFournisseurLocalDev.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdrevirementFournisseurLocalDev.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ordre_de_Virement_FournisseurEtranger.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ordre_de_Virement_FournisseurEtranger.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="OrdrevirementFournisseurLocal.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdrevirementFournisseurLocal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ordre de Virement_FournisseurLocalNonActif.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Ordre de Virement_FournisseurLocalNonActif.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formulaire_Fournisseuretranger.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Formulaire_Fournisseuretranger.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Paiement_electronique.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Paiement_electronique.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Paiement_electronique_Devise.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Paiement_electronique_Devise.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ParametreConnexion.designer.vb">
+      <DependentUpon>ParametreConnexion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ParametreConnexion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FournisseurLocaux.designer.vb">
+      <DependentUpon>FournisseurLocaux.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FournisseurLocaux.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdressestockageMT.designer.vb">
+      <DependentUpon>AdressestockageMT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdressestockageMT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AttestationFournisseurLocal_Devise.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AttestationFournisseurLocal_Devise.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attestation_Douane.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Attestation_Douane.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attestation_FournisseurActif_Cheque.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Attestation_FournisseurActif_Cheque.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attestation_FournisseurEtranger.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Attestation_FournisseurEtranger.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttestationFournisseurLocal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AttestationFournisseurLocal.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attestation_FournisseurLocalNonActif.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Attestation_FournisseurLocalNonActif.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attestation_FournisseurNonActifCheque.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Attestation_FournisseurNonActifCheque.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnvoiManuelfichier.resx">
+      <DependentUpon>EnvoiManuelfichier.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfosupDouaneVirement.resx">
+      <DependentUpon>InfosupDouaneVirement.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FournisseurDouaneVirement.resx">
+      <DependentUpon>FournisseurDouaneVirement.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FichierJournal.resx">
+      <DependentUpon>FichierJournal.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FournisseurEtrangerVirement.resx">
+      <DependentUpon>FournisseurEtrangerVirement.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfosupNonActifCheque.resx">
+      <DependentUpon>InfosupNonActifCheque.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FournisseurNonActifCheque.resx">
+      <DependentUpon>FournisseurNonActifCheque.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfosupActifCheque.resx">
+      <DependentUpon>InfosupActifCheque.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FournisseurActifCheque.resx">
+      <DependentUpon>FournisseurActifCheque.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfosupNonActifVirement.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>InfosupNonActifVirement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FournisseurNonActifVirement.resx">
+      <DependentUpon>FournisseurNonActifVirement.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaquetteFournisseurEtranger.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MaquetteFournisseurEtranger.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChargement.resx">
+      <DependentUpon>frmChargement.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuApplication.fr-FR.resx">
+      <DependentUpon>MenuApplication.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuApplication.fr.resx">
+      <DependentUpon>MenuApplication.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuApplication.resx">
+      <DependentUpon>MenuApplication.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordre de Virement_Douane.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Ordre de Virement_Douane.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdrevirementFournisseurLocalDev.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OrdrevirementFournisseurLocalDev.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordre_de_Virement_FournisseurEtranger.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Ordre_de_Virement_FournisseurEtranger.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdrevirementFournisseurLocal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>OrdrevirementFournisseurLocal.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ordre de Virement_FournisseurLocalNonActif.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Ordre de Virement_FournisseurLocalNonActif.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formulaire_Fournisseuretranger.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Formulaire_Fournisseuretranger.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paiement_electronique.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Paiement_electronique.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paiement_electronique_Devise.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Paiement_electronique_Devise.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParametreConnexion.resx">
+      <DependentUpon>ParametreConnexion.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FournisseurLocaux.resx">
+      <DependentUpon>FournisseurLocaux.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdressestockageMT.resx">
+      <DependentUpon>AdressestockageMT.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_161.ico" />
+    <None Include="Resources\add_16.ico" />
+    <None Include="Resources\btn_valider.gif" />
+    <None Include="Resources\image033.gif" />
+    <None Include="Resources\folderopen_16.gif" />
+    <None Include="Resources\supprimer.gif" />
+    <None Include="Resources\applications_161.ico" />
+    <None Include="Resources\save_32.ico" />
+    <None Include="Resources\save_16.ico" />
+    <None Include="Resources\Papier peint Waza.bmp" />
+    <None Include="Resources\loupe.gif" />
+    <None Include="Resources\loupe1.gif" />
+    <None Include="Resources\loupe_1.png" />
+    <None Include="Resources\documents_16.ico" />
+    <None Include="Resources\Icone_imprimer.gif" />
+    <None Include="Resources\criticalind_status.gif" />
+    <None Include="Resources\image034.gif" />
+    <Content Include="waza icone.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Ligne1000">
+      <Guid>{A9C15AA0-30A3-11D3-8A87-0008C79A883C}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3924545A-F8E2-475A-B1A4-05175BC41E50}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

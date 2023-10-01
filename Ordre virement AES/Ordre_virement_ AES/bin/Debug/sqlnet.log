@@ -1,0 +1,95 @@
+
+
+***********************************************************************
+Fatal NI connect error 12545, connecting to:
+ (DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=SERVER_ORACLE)(PORT=1521))(CONNECT_DATA=(SERVICE_NAME=SAGE)(CID=(PROGRAM=C:\Documents and Settings\CPL\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.vshost.exe)(HOST=CPLOG)(USER=CPL))))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.1.0.2.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.1.0.2.0 - Production
+  Time: 01-JUIN -2012 12:50:10
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12545
+    TNS-12545: la connexion a échoué car l'hôte ou l'objet cible n'existe pas
+    ns secondary err code: 12560
+    nt main err code: 515
+    TNS-00515: La connexion a échoué parce que l'hôte ou l'objet cible n'existe pas
+    nt secondary err code: 1001
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12541, connecting to:
+ (DESCRIPTION=(CONNECT_DATA=(SERVICE_NAME=MTNO)(CID=(PROGRAM=C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.vshost.exe)(HOST=WAZA)(USER=Administrateur)))(ADDRESS=(PROTOCOL=TCP)(HOST=169.254.40.168)(PORT=1597)))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.1.0.2.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.1.0.2.0 - Production
+  Time: 19-JAN-2014 21:49:44
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12541
+    TNS-12541: TNS:no listener
+    ns secondary err code: 12560
+    nt main err code: 511
+    TNS-00511: No listener
+    nt secondary err code: 61
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12541, connecting to:
+ (DESCRIPTION=(CONNECT_DATA=(SERVICE_NAME=MTNO)(CID=(PROGRAM=C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.vshost.exe)(HOST=WAZA)(USER=Administrateur)))(ADDRESS=(PROTOCOL=TCP)(HOST=169.254.40.168)(PORT=1597)))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.1.0.2.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.1.0.2.0 - Production
+  Time: 19-JAN-2014 21:49:54
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12541
+    TNS-12541: TNS:no listener
+    ns secondary err code: 12560
+    nt main err code: 511
+    TNS-00511: No listener
+    nt secondary err code: 61
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12541, connecting to:
+ (DESCRIPTION=(CONNECT_DATA=(SERVICE_NAME=MTNO)(CID=(PROGRAM=C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.vshost.exe)(HOST=WAZA)(USER=Administrateur)))(ADDRESS=(PROTOCOL=TCP)(HOST=169.254.40.168)(PORT=1597)))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.1.0.2.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.1.0.2.0 - Production
+  Time: 19-JAN-2014 21:51:01
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12541
+    TNS-12541: TNS:no listener
+    ns secondary err code: 12560
+    nt main err code: 511
+    TNS-00511: No listener
+    nt secondary err code: 61
+    nt OS err code: 0
+
+
+***********************************************************************
+Fatal NI connect error 12541, connecting to:
+ (DESCRIPTION=(CONNECT_DATA=(SERVICE_NAME=MTNO)(CID=(PROGRAM=C:\Documents and Settings\Administrateur\Mes documents\Visual Studio 2005\Projects\Ordre virement AES\Ordre_virement_ AES\bin\Debug\Ordre_virement_AES.vshost.exe)(HOST=WAZA)(USER=Administrateur)))(ADDRESS=(PROTOCOL=TCP)(HOST=169.254.40.168)(PORT=1597)))
+
+  VERSION INFORMATION:
+	TNS for 32-bit Windows: Version 10.1.0.2.0 - Production
+	Windows NT TCP/IP NT Protocol Adapter for 32-bit Windows: Version 10.1.0.2.0 - Production
+  Time: 19-JAN-2014 21:51:11
+  Tracing not turned on.
+  Tns error struct:
+    ns main err code: 12541
+    TNS-12541: TNS:no listener
+    ns secondary err code: 12560
+    nt main err code: 511
+    TNS-00511: No listener
+    nt secondary err code: 61
+    nt OS err code: 0

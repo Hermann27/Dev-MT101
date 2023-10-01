@@ -1,0 +1,4 @@
+If OidBordereau.Ebanking = "MT101" Then
+
+                                    Else
+                                    End If
